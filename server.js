@@ -9,7 +9,7 @@ const { PORT } = process.env;
 connectDB();
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public")); //Through this method I can access the files in public by typing "http://localhost:8000/ImageFileName"
+app.use(express.static("public")); //Through this method I can access the files in public by typing "https://ecom-b10-server.onrender.com/ImageFileName"
 app.use("/users", require("./controllers/users"));
 app.use("/products", require("./controllers/products"));
 app.use("/cart", require("./controllers/carts"));
