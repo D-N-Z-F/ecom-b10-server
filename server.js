@@ -7,7 +7,7 @@ require("dotenv").config(); //This has to be above the process.env, if not PORT 
 const { PORT } = process.env;
 
 connectDB();
-app.use(cors());
+app.use(cors()); //Allows Cross-Origin-Resource-Sharing
 app.use(express.json());
 app.use(express.static("public")); //Through this method I can access the files in public by typing "https://ecom-b10-server.onrender.com/ImageFileName"
 app.use("/users", require("./controllers/users"));
